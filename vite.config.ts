@@ -16,7 +16,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  base: 'document-converter-web',
+  base: '/document-converter-web/',
 
   plugins: [
     figmaAssetResolver(),
