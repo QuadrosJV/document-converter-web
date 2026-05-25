@@ -1,11 +1,11 @@
-import { createBrowserRouter, Navigate, Outlet } from "react-router";
+import { createHashRouter, Navigate, Outlet } from "react-router";
 import { AuthProvider } from "./context/AuthContext";
 import { HomePage } from "./pages/HomePage";
 import { EditorPage } from "./pages/EditorPage";
 
 /**
  * Layout raiz — AuthProvider precisa estar DENTRO da árvore do RouterProvider
- * para que useAuth() funcione em todos os componentes de rota (incluindo Navbar).
+ * para que useAuth() funcione em todos os componentes de rota.
  */
 function RootLayout() {
   return (
@@ -15,7 +15,7 @@ function RootLayout() {
   );
 }
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     Component: RootLayout,
